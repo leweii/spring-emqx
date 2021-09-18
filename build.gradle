@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.5.4'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'checkstyle'
 }
 
 group = 'com.jakobhe'
@@ -18,17 +19,62 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-integration'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.integration:spring-integration-http'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.integration:spring-integration-test'
-}
 
-test {
-    useJUnitPlatform()
+subprojects {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+    group = rootProject.group
+    version = rootProject.version
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+    apply plugin: "checkstyle"
+    apply plugin: 'io.spring.dependency-management'
+
+    checkstyle {
+        toolVersion = '8.15'
+        showViolations = true
+        configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
+    }
+
+    ext {
+        springBootVersion = '2.2.2.RELEASE'
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+        }
+
+        dependencies {
+
+        }
+
+    }
+
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-integration'
+        implementation 'org.springframework.integration:spring-integration-stream'
+        implementation "org.springframework.integration:spring-integration-mqtt"
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.integration:spring-integration-http'
+
+        compileOnly group: 'org.projectlombok', name: 'lombok'
+        annotationProcessor group: 'org.projectlombok', name: 'lombok'
+        testImplementation group: 'org.projectlombok', name: 'lombok'
+
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+        annotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testImplementation 'org.springframework.integration:spring-integration-test'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
 }

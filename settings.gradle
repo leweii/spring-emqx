@@ -1,1 +1,3 @@
 rootProject.name = 'spring-emqx'
+
+include 'publish'

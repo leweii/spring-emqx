@@ -1,0 +1,14 @@
+server:
+  port: 1001
+
+jakob:
+  mqtt:
+    emqx:
+      username: admin
+      password: public
+      host-rul: tcp://192.168.186.128:1883
+      client-id: jakob${random.value}
+      default-topic: jakob_topic/#
+      timeout: 60
+      keep-alive: 60
+      qos: 0

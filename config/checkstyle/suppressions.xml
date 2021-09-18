@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+        "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+        "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- can't split long messages between lines -->
+    <suppress checks="JavadocMethod" />
+    <suppress checks="JavadocType" />
+    <suppress checks="LineLength" />
+    <suppress checks="FinalParameters" />
+    <suppress checks="JavadocVariable" />
+    <!--<suppress checks="JavadocStyle" />-->
+    <!--<suppress checks="ModifierOrder" />-->
+    <suppress checks="HiddenField" />
+    <!--<suppress checks="OperatorWrap" />-->
+    <suppress checks="DesignForExtension" />
+    <suppress checks="AvoidInlineConditionals" />
+    <suppress checks="JavadocPackage" />
+    <!--<suppress checks="MagicNumber" />-->
+    <suppress checks="MagicNumber"
+              files="ReportController.java"/>
+    <suppress checks="MagicNumber"
+              files="DataLoadController.java"/>
+    <suppress checks="MagicNumber"
+              files="ExportController.java"
+              lines="87"/>
+    <suppress checks="MagicNumber"
+              files="[A-Za-z]+Repository[A-Za-z]+\.java"/>
+    <suppress checks="MagicNumber"
+              files="ReportProcessorImpl.java"/>
+    <suppress checks="MagicNumber"
+              files="FullReportProcessorImpl.java"/>
+    <suppress checks="MagicNumber"
+              files="MessageFetchRetryProcessorImpl.java"
+              lines="10"/>
+    <suppress checks="MagicNumber"
+              files="MessageFetchProcessorImpl.java"
+              lines="8"/>
+    <suppress checks="MagicNumber"
+              files="CallFetchRetryProcessorImpl.java"
+              lines="10"/>
+    <suppress checks="MagicNumber"
+              files="CallFetchProcessorImpl.java"
+              lines="11"/>
+    <suppress checks="MagicNumber"
+              files="ArchiveProcessImpl.java"
+              lines="71"/>
+    <suppress checks="MagicNumber"
+              files="SyncUpUserInfoHandler.java"
+              lines="17"/>
+    <suppress checks="MagicNumber"
+              files="RefreshPlatformTokenHandler.java"
+              lines="21"/>
+    <suppress checks="MagicNumber"
+              files="CheckStorageHandler.java"
+              lines="22"/>
+    <suppress checks="MagicNumber"
+              files="SFTPUserLockFilter.java"
+              lines="7"/>
+    <suppress checks="MagicNumber"
+              files="DropboxUserLockFilter.java"
+              lines="7"/>
+    <suppress checks="MagicNumber"
+              files="BoxUserLockFilter.java"
+              lines="7"/>
+    <suppress checks="MagicNumber"
+              files="DriveUserLockFilter.java"
+              lines="25"/>
+    <suppress checks="MagicNumber"
+              files="Trace.java"
+              lines="172-192"/>
+    <suppress checks="MagicNumber"
+              files="TokenInvalidNotification.java"
+              lines="18"/>
+    <suppress checks="MagicNumber"
+              files="StorageTokenInvalidNotification.java"
+              lines="14"/>
+    <suppress checks="MagicNumber"
+              files="StorageFullNotification.java"
+              lines="19"/>
+    <suppress checks="MagicNumber"
+              files="NotificationHandler.java"
+              lines="18"/>
+    <suppress checks="MagicNumber"
+              files="DisconnectStorageHandler.java"
+              lines="12"/>
+    <suppress checks="MagicNumber"
+              files="DisableBackupHandler.java"
+              lines="12"/>
+    <!--<suppress checks="UpperEll" />-->
+    <suppress checks="VisibilityModifier" />
+    <suppress checks="ParameterNumber" />
+    <!--<suppress checks="EmptyBlock" />-->
+    <!--<suppress checks="LocalVariableName" />-->
+    <suppress checks="HideUtilityClassConstructor" />
+    <!--<suppress checks="NoWhitespaceBefore" />-->
+    <suppress checks="AvoidStarImport" />
+    <suppress checks="ConstantName" />
+    <!--<suppress checks="NewlineAtEndOfFile" />-->
+    <suppress checks="TodoComment" />
+    <!--<suppress checks="FileTabCharacter" />-->
+    <suppress checks="StaticVariableName" />
+    <!--<suppress checks="RedundantModifier" />-->
+    <!--<suppress checks="SimplifyBooleanExpression" />-->
+    <!--<suppress checks="WhitespaceAfter" />-->
+    <!--<suppress checks="ParameterName" />-->
+    <suppress checks="MemberName"/>
+    <suppress checks="MethodLength"/>
+    <!--<suppress checks="WhitespaceAround" />-->
+    <!--<suppress checks="FinalClass" />-->
+    <!--<suppress checks="MethodName" />-->
+    <!--<suppress checks="InnerAssignment" />-->
+    <!--<suppress checks="RegexpSingleline" />-->
+    <suppress checks="InterfaceIsType" files="GlipToCoreSenderService.java"/>
+    <suppress checks="[a-zA-Z0-9]*" files="[\\/]generated[\\/]"/>
+    <suppress checks="MagicNumber" files="RequestWorkflow.java"/>
+    <suppress checks="MagicNumber" files="DownloadWorkflow.java"/>
+    <suppress checks="AvoidNestedBlocks" files="PlatformRequestService.java"/>
+
+</suppressions>
