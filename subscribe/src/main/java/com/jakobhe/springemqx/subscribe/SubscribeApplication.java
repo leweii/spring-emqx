@@ -1,12 +1,12 @@
-package com.jakobhe.springemqx.publish;
+package com.jakobhe.springemqx.subscribe;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PublishApplication {
+public class SubscribeApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PublishApplication.class, args);
+        SpringApplication.run(SubscribeApplication.class, args);
     }
 }
