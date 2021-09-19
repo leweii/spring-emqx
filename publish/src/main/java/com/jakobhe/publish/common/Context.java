@@ -1,4 +1,4 @@
-package com.jakobhe.springemqx.publish.common;
+package com.jakobhe.publish.common;
 
 public class Context {
 

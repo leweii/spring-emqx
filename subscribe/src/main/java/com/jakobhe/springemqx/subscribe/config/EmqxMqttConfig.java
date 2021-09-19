@@ -13,6 +13,7 @@ import org.springframework.integration.mqtt.core.DefaultMqttPahoClientFactory;
 import org.springframework.integration.mqtt.core.MqttPahoClientFactory;
 import org.springframework.integration.mqtt.inbound.MqttPahoMessageDrivenChannelAdapter;
 import org.springframework.integration.mqtt.support.DefaultPahoMessageConverter;
+import org.springframework.integration.support.DefaultErrorMessageStrategy;
 import org.springframework.messaging.MessageChannel;
 
 import javax.annotation.Resource;

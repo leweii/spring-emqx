@@ -57,17 +57,13 @@ subprojects {
     }
 
     dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
         implementation 'org.springframework.boot:spring-boot-starter-integration'
         implementation 'org.springframework.integration:spring-integration-stream'
         implementation "org.springframework.integration:spring-integration-mqtt"
         implementation 'org.springframework.integration:spring-integration-http'
-        implementation 'org.springframework.boot:spring-boot-starter-web'
 
-        compileOnly group: 'org.projectlombok', name: 'lombok'
-        annotationProcessor group: 'org.projectlombok', name: 'lombok'
-        testImplementation group: 'org.projectlombok', name: 'lombok'
-
-        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+        compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
         testImplementation 'org.springframework.integration:spring-integration-test'

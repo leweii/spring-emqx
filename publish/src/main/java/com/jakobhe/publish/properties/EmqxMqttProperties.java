@@ -1,4 +1,4 @@
-package com.jakobhe.springemqx.publish.properties;
+package com.jakobhe.publish.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

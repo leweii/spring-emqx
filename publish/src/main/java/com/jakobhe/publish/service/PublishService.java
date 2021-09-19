@@ -1,6 +1,6 @@
-package com.jakobhe.springemqx.publish.service;
+package com.jakobhe.publish.service;
 
-import com.jakobhe.springemqx.publish.common.Context;
+import com.jakobhe.publish.common.Context;
 import org.springframework.integration.annotation.MessagingGateway;
 import org.springframework.stereotype.Component;
 

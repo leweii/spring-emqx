@@ -1,6 +1,6 @@
-package com.jakobhe.springemqx.publish.service.impl;
+package com.jakobhe.publish.service.impl;
 
-import com.jakobhe.springemqx.publish.service.PublishService;
+import com.jakobhe.publish.service.PublishService;
 
 public class PublishServiceImpl implements PublishService {
 
