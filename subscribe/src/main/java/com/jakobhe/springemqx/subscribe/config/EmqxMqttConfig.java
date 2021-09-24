@@ -55,7 +55,6 @@ public class EmqxMqttConfig {
     }
 
     @Bean
-    @ServiceActivator(inputChannel = Context.MQTT_SUBSCRIBE_CHANNEL)
     public MessageProducer subscribe() {
         MqttPahoMessageDrivenChannelAdapter mqttPahoMessageDrivenChannelAdapter =
                 new MqttPahoMessageDrivenChannelAdapter(emqxMqttProperties.getClientId(), getMqttPahoSubscribeClientFactory(), emqxMqttProperties.getDefaultTopic().split(","));
