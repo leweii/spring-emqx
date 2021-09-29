@@ -7,8 +7,8 @@ jakob:
       username: admin
       password: public
       host-url: tcp://localhost:1883
-      client-id: jakob${random.value}
-      default-topic: jakob_topic
+      client-id: jakobled
+      default-topic: jakob_topic,jakob_reply_topic
       timeout: 60
       keep-alive: 60
       qos: 0

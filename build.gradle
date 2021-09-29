@@ -61,6 +61,7 @@ subprojects {
         implementation 'org.springframework.boot:spring-boot-starter-integration'
         implementation 'org.springframework.integration:spring-integration-stream'
         implementation "org.springframework.integration:spring-integration-mqtt"
+        implementation 'com.google.code.gson:gson'
 
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
